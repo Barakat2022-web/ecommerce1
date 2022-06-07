@@ -76,7 +76,7 @@
         <div class="form-group">
                 <div class="col-md-6">
                     <label>العنوان</label>
-                    <input type="text" id="address" name="" class="form-control" value="{{$vendor->address}}">
+                    <input type="text" id="address" name="address" class="form-control" value="{{$vendor->address}}">
                     @error('address')
                      <span class="text-danger">{{$message}}</span>
                     @enderror

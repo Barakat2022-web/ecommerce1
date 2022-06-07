@@ -29,6 +29,7 @@
         },
         "files": [
             "App/Helpers/General.php"
+             
         ]
     },
     "autoload-dev": {
