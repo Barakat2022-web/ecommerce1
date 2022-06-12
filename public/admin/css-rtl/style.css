@@ -31,6 +31,7 @@ ul li {
 a, a:hover, a:focus {
     text-decoration: none;
     outline: none;
+     
 }
 ::selection {
 
@@ -245,6 +246,10 @@ ul.top-menu > li > .logout {
 #sidebar ul li {
     position: relative;
 }
+
+
+
+ 
 
 #sidebar .sub-menu > .sub li  {
     padding-right: 32px;
@@ -3490,3 +3495,5 @@ ul.chat-available-user li a:hover {
 #copyrights a {
   color: #fff;
 }
+
+ 

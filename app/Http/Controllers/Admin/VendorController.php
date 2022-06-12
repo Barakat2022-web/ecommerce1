@@ -174,7 +174,7 @@ class VendorController extends Controller
 
               //use except password and photo because not every time need updated may be not update
               //id,_token because its get for request not to save in db
-              $data=$request->except('_token','id','photo','password','_method');
+               $data=$request->except('_token','id','photo','password','_method');
 
               vendor::where('id',$id)->update($data);
 

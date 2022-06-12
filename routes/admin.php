@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LanguagesController;
-use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\MainCategoryController;
+use App\Http\Controllers\Admin\SubCategoryController;
+use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\VendorController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +20,8 @@ Route::group(['middleware'=>'auth:admin'],function(){
      Route::resource('vendors',VendorController::class);
      Route::get('vendors/changestatus/{id}',[VendorController::class,'ChangeStatus'])->name('vendors.status');
 
+     Route::resource('sub_categories',SubCategoryController::class);
+     Route::resource('brands',BrandController::class);
 
  });
 

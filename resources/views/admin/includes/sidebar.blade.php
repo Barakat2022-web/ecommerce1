@@ -1,13 +1,13 @@
 <!--sidebar start-->
 <aside>
-    <div id="sidebar" class="nav-collapse ">
+    <div id="sidebar" class="nav-collapse">
       <!-- sidebar menu start-->
       <ul class="sidebar-menu" id="nav-accordion">
         <p class="centered"><a href=""><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
         <h5 class="centered">Sam Soffes</h5>
 
         <li class="sub-menu">
-          <a href="javascript:;" class="active">
+          <a href="javascript:;">
             <i class="fa fa-language"></i>
             <span>لغات الموقع   <span class="badge bg-success">{{App\Models\Language::count()}}</span></span>
             </a>
@@ -19,8 +19,8 @@
           </ul>
         </li>
         <li class="sub-menu">
-          <a href="javascript:;" class="active">
-            <i class="fa fa-cogs"></i>
+          <a href="javascript:;">
+            <i class="fa fa-list-alt"></i>
             <span>الأقسام الرئيسية</span>
             <span class="badge bg-success">{{App\Models\main_category::Arabic()->count()}}</span>
             </a>
@@ -30,8 +30,35 @@
 
           </ul>
         </li>
+
         <li class="sub-menu">
-            <a href="javascript:;" class="active">
+            <a href="javascript:;">
+              <i class="fa fa-list-alt"></i>
+              <span>الأقسام الفرعية</span>
+              <span class="badge bg-success">{{App\Models\sub_category::count()}}</span>
+              </a>
+            <ul class="sub">
+              <li><a href="">عرض الكل</a></li>
+              <li><a href="">أضافة قسم فرعي جديد</a></li>
+
+            </ul>
+        </li>
+
+        <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-list-alt"></i>
+              <span>الماركات التجارية</span>
+              <span class="badge bg-success">{{App\Models\brand::count()}}</span>
+              </a>
+            <ul class="sub">
+              <li><a href="{{route('brands.index')}}">عرض الكل</a></li>
+              <li><a href="{{route('brands.create')}}">أضافة ماركة جديدة</a></li>
+
+            </ul>
+          </li>
+
+        <li class="sub-menu">
+            <a href="javascript:;">
                 <i class="fa fa-cogs"></i>
               <span>المتاجر</span>
               <span class="badge bg-success">{{App\Models\vendor::count()}}</span>
