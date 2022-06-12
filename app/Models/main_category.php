@@ -19,7 +19,7 @@ class main_category extends Model
 
 
     /*
-    connect model with Observer ,to change the active auto for vendor when change 
+    connect model with Observer ,to change the active auto for vendor when change
     the active in main category
     */
     protected static function boot()
@@ -49,6 +49,7 @@ class main_category extends Model
         return ($value!==null)?asset($value):'';
     }
 
+
     public function scopeArabic($query)
     {
         return  $query->where('translation_of',0);
@@ -60,6 +61,14 @@ class main_category extends Model
     public function categories()
     {
         return $this->hasMany(self::class,'translation_of');
+    }
+
+
+    //get SubCategory for MainCategory
+
+    public function SubCategories()
+    {
+        return $this->hasMany(sub_category::class,'category_id');
     }
 
     //relation one to many between main_category and vendor

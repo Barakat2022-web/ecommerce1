@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\main_category;
+use App\Models\sub_category;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,20 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
+
+
+############ Test Part Route ###############
+Route::get('subCategory',function()
+{
+   $Main_cate=main_category::find(1);
+   return $Main_cate->SubCategories;
+});
+
+Route::get('MainCate',function()
+{
+   $Main_cate=sub_category::find(1);
+   return $Main_cate->MainCategory;
+});
+
+##############End Test ################

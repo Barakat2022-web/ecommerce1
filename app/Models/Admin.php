@@ -14,5 +14,10 @@ class Admin extends Authenticatable
 
     protected $fillable=['name','email','photo','password','created_at','updated_at'];
 
+    //$guarded=[] this mean all column is fillable and nothing hidden
+    //protected $guarded=[];
+
+    public $timestamps=true;
+
     protected $hidden=['password','remeber_token'];
 }
