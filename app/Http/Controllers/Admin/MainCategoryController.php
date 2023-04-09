@@ -46,9 +46,10 @@ class MainCategoryController extends Controller
     public function store(MainCategoryRequest $request)
     {
 
+
         try
         {
-             //return $request;
+            // return $request;
              //convert array of object return from request to collection
 
             //use collect to make filter in request return from category and see who is the ar langauge
@@ -228,9 +229,6 @@ class MainCategoryController extends Controller
         try {
 
               $MainCategory=main_category::find($id);
-
-
-
             if(!$MainCategory)
             {
                 return redirect()->route('maincategories.index')->with('error','هذا القسم غير موجود');
@@ -255,7 +253,9 @@ class MainCategoryController extends Controller
             //Delete Translation related to
             $MainCategory->categories()->delete();
 
-            return redirect()->route('maincategories.index')->with('success','حذف القسم بنجاح');
+            //This use for ajax response
+            return response()->json(['success'=>'تم حذف القسم بنجاح']);
+           // return redirect()->route('maincategories.index')->with('success','حذف القسم بنجاح');
 
 
         } catch (Exception $ex)

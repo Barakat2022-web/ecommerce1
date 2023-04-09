@@ -24,7 +24,7 @@ class VendorController extends Controller
      */
     public function index()
     {
-           $vendors=vendor::selection()->paginate(5);
+        $vendors=vendor::selection()->paginate(5);
 
         return view('admin.vendors.index',compact('vendors'));
     }
@@ -224,11 +224,7 @@ class VendorController extends Controller
           //else Delete MainCategory
           $Vendors->delete();
 
-
-
-          return redirect()->route('vendors.index')->with('success','تم حدف التاجر بنجاح');
-
-
+          return response()->json(['success'=>'تم حدف التاجر بنجاح']);
       } catch (Exception $ex)
       {
 

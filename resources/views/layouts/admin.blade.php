@@ -61,20 +61,25 @@
     <!-- MAIN CONTENT -->
     <!--main content end-->
     <!--footer start-->
+    @yield('scripts')
    @include('admin.includes.footer')
     <!--footer end-->
 </section>
 
 
   <!-- js placed at the end of the document so the pages load faster -->
-  <script src="{{asset('admin/lib/jquery/jquery.min.js')}}"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="{{asset('admin/lib/bootstrap/js/bootstrap.min.js')}}"></script>
   <script class="include" type="text/javascript" src="{{asset('admin/lib/jquery.dcjqaccordion.2.7.js')}}"></script>
   <script src="{{asset('admin/lib/jquery.scrollTo.min.js')}}"></script>
   <script src="{{asset('admin/lib/jquery.nicescroll.js')}}" type="text/javascript"></script>
   <!--common script for all pages-->
   <script src="{{asset('admin/lib/common-scripts.js')}}"></script>
+  <!--sweet alert script -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   <!--script for this page-->
+
 
   <script src="{{asset('admin/js/bootstrap-fileupload.js')}}"></script>
 
